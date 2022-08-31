@@ -61,5 +61,12 @@ export default {
 </script>
 
 <style scoped>
-
+.m-content {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .maction {
+    margin: 10px 0;
+  }
 </style>

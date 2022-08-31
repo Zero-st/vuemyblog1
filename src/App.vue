@@ -2,7 +2,7 @@
   <div id="app">
     <ul>
       <li>
-        <router-link to="/Login">Login</router-link>
+        <router-link to="/login">Login</router-link>
       </li>
     </ul>
     <router-view/>

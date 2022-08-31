@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+// 告诉 vue “使用” vuex
 Vue.use(Vuex)
+// 组装模块并导出 store 的文件
 export default new Vuex.Store({
+  // 放置初始状态 app启动的时候的全局的初始值
   state: {
     token: '',
     userInfo: JSON.parse(sessionStorage.getItem('userInfo'))

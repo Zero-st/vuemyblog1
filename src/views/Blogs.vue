@@ -3,7 +3,7 @@
     <Header></Header>
     <div class="block">
       <el-timeline>
-        <el-timeline-item v-bind:timestamp="blog.created" placement="top" v-for="blog in blogs" :key="blog" :value="blog.value">>
+       <el-timeline-item :timestamp="blog.created" placement="top" v-for="blog in blogs" v-bind:key="blog.id">
           <el-card>
             <h4><router-link :to="{name: 'BlogDetail', params: {blogId: blog.id}}">{{blog.title}}</router-link></h4>
             <p>{{blog.description}}</p>

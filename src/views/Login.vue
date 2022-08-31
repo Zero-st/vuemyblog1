@@ -3,13 +3,13 @@
     <el-container>
       <el-header>
         <router-link to="/blogs">
-          <img src="https://www.markerhub.com/dist/images/logo/markerhub-logo.png"
-               style="height: 60%; margin-top: 10px;">
+          111
         </router-link>
       </el-header>
       <el-main>
         <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px"
                  class="demo-ruleForm">
+<!--          使用 v-model, 将视图与模型进行绑定-->
           <el-form-item label="用户名" prop="username">
             <el-input type="text" maxlength="12" v-model="ruleForm.username"></el-input>
           </el-form-item>
@@ -29,6 +29,7 @@
 <script>
 export default {
   name: 'Login',
+  // 数据双向绑定
   data () {
     var validatePass = (rule, value, callback) => {
       if (value === '') {
@@ -63,7 +64,7 @@ export default {
             const token = res.headers['authorization']
             _this.$store.commit('SET_TOKEN', token)
             _this.$store.commit('SET_USERINFO', res.data.data)
-            _this.$router.push('/blogs')
+            _this.$router.push({name: 'Header'})
           })
         } else {
           console.log('error submit!!')
